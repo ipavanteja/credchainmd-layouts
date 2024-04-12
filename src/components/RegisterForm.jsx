@@ -146,7 +146,7 @@ const RegisterForm = () => {
             Create an Account
           </Button>
         </form>
-        <Link className="w-full" to={"/login"}>
+        <Link className="w-full" to={"/credchainmd-layouts/login"}>
           <Button
             variant="outline"
             className="w-full bg-gray-100"

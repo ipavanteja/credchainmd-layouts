@@ -8,7 +8,7 @@ const ProtectedRoute = () => {
   useEffect(() => {
     const isAuthenticated = localStorage.getItem("user");
     if (!isAuthenticated) {
-      return navigate("/", { replace: true });
+      return navigate("/credchainmd-layouts/", { replace: true });
     }
   }, [navigate]);
 

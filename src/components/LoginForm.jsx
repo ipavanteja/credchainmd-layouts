@@ -52,14 +52,14 @@ const LoginForm = () => {
   useEffect(() => {
     const user = localStorage.getItem("user");
     if (user?.length) {
-      navigate("/home", { replace: true });
+      navigate("/credchainmd-layouts/home", { replace: true });
     }
   }, []);
 
   async function onSubmit() {
     try {
       localStorage.setItem("user", "test");
-      navigate("/home");
+      navigate("/credchainmd-layouts/home");
     } catch (error) {
       console.log(error);
     }
@@ -108,7 +108,7 @@ const LoginForm = () => {
 
           <div>
             <Link
-              to="/forgot-password"
+              to="/credchainmd-layouts/forgot-password"
               className="text-sm text-blue-400 underline"
             >
               Forgot Your Password?
@@ -122,7 +122,7 @@ const LoginForm = () => {
             Sign In
           </Button>
         </form>
-        <Link className="w-full" to={"/register"}>
+        <Link className="w-full" to={"/credchainmd-layouts/register"}>
           <Button
             variant="outline"
             className="w-full bg-gray-100"

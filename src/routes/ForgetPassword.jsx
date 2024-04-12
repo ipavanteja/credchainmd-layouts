@@ -20,7 +20,7 @@ const ForgetPassword = () => {
             <div className="flex space-y-2 text-center">
               <button>
                 <Link
-                  to="/"
+                  to="/credchainmd-layouts/login"
                   className="flex items-center pr-6 text-blue-950 hover:underline text-base"
                 >
                   {`< Back`}

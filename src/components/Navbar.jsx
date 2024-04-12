@@ -22,12 +22,12 @@ const Navbar = () => {
   const [navDescription, setNavDescription] = useState("");
 
   useEffect(() => {
-    if (location.pathname === "/home") {
+    if (location.pathname === "/credchainmd-layouts/home") {
       setNavHeader(`👋 Hi, ${userName}`);
       setNavDescription(
         `Good morning there! Let's see what we have today on your list.`
       );
-    } else if (location.pathname === "/profile") {
+    } else if (location.pathname === "/credchainmd-layouts/profile") {
       setNavHeader(`My Profile`);
       setNavDescription(`You can update your profile details here`);
     }
@@ -36,7 +36,7 @@ const Navbar = () => {
   const logout = () => {
     try {
       localStorage.removeItem("user");
-      navigate("/login");
+      navigate("/credchainmd-layouts/login");
     } catch (error) {
       console.log(error);
     }
@@ -75,10 +75,10 @@ const Navbar = () => {
               </div>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
-                <Link to="/home">Dashboard</Link>
+                <Link to="/credchainmd-layouts/home">Dashboard</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link to="/profile">My Profile</Link>
+                <Link to="/credchainmd-layouts/profile">My Profile</Link>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onClick={handleLogout}>

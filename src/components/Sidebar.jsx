@@ -27,7 +27,7 @@ const Sidebar = () => {
   const logout = () => {
     try {
       localStorage.removeItem("user");
-      navigate("/login");
+      navigate("/credchainmd-layouts/login");
     } catch (error) {
       console.log(error);
     }
@@ -48,11 +48,11 @@ const Sidebar = () => {
             <div>
               <Link
                 className={`inline-flex gap-3  px-4 py-2 ${
-                  location.pathname === "/home"
+                  location.pathname === "/credchainmd-layouts/home"
                     ? "bg-[#0077B6] text-white hover:black"
                     : "text-white hover:bg-[#0077B6]"
                 } rounded-md w-full md:justify-center xl:justify-start   duration-200`}
-                to={"/home"}
+                to={"/credchainmd-layouts/home"}
               >
                 <LayoutDashboardIcon width={18} />
                 <p className="xl:block md:hidden">Dashboard</p>
@@ -61,24 +61,17 @@ const Sidebar = () => {
             <div>
               <Link
                 className={`inline-flex   gap-3 px-4 py-2 ${
-                  location.pathname === "/profile"
+                  location.pathname === "/credchainmd-layouts/profile"
                     ? "bg-[#0077B6] text-white hover:black"
                     : "text-white hover:bg-[#0077B6] "
                 } rounded-md w-full md:justify-center xl:justify-start duration-200`}
-                to={"/profile"}
+                to={"/credchainmd-layouts/profile"}
               >
                 <User width={18} />
                 <p className="xl:block md:hidden">My Profile</p>
               </Link>
             </div>
           </div>
-          {/* <button
-            className="w-full flex gap-3 rounded-md px-4 py-2 text-primary-foreground  md:justify-center xl:justify-start"
-            onClick={logout}
-          >
-            <LogOut />
-            <p className="xl:block md:hidden">Logout</p>
-          </button> */}
           <AlertDialog>
             <AlertDialogTrigger asChild>
               <button className="w-full flex gap-3 rounded-md px-4 py-2 text-primary-foreground  md:justify-center xl:justify-start">

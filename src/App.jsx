@@ -9,16 +9,19 @@ import ProtectedRoute from "./components/ProtectedRoute";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Outlet />}>
+      <Route path="/credchainmd-layouts" element={<Outlet />}>
         <Route index element={<Login />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="forgot-password" element={<ForgetPassword />} />
+        <Route path="/credchainmd-layouts/login" element={<Login />} />
+        <Route path="/credchainmd-layouts/register" element={<Register />} />
+        <Route
+          path="/credchainmd-layouts/forgot-password"
+          element={<ForgetPassword />}
+        />
         <Route element={<ProtectedRoute />}>
-          <Route path="home" element={<Home />} />
+          <Route path="/credchainmd-layouts/home" element={<Home />} />
         </Route>
         <Route element={<ProtectedRoute />}>
-          <Route path="profile" element={<Profile />} />
+          <Route path="/credchainmd-layouts/profile" element={<Profile />} />
         </Route>
       </Route>
     </Routes>
